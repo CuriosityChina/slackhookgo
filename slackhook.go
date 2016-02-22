@@ -13,6 +13,7 @@ type SlackMessage struct {
 	IconEmoji   string              `json:"icon_emoji,omitempty"`
 	Channel     string              `json:"channel,omitempty"`
 	Text        string              `json:"text,omitempty"`
+	Mrkdwn      string              `json:"mrkdwn,omitempty"`
 	Attachments []MessageAttachment `json:"attachments,omitempty"`
 }
 
@@ -29,6 +30,7 @@ type MessageAttachment struct {
 	Fields     []AttachmentField `json:"fields,omitempty"`
 	ImageURL   string            `json:"image_url,omitempty"`
 	ThumbURL   string            `json:"thumb_url,omitempty"`
+	MrkdwnIn   []string          `json:"mrkdwn_in,omitempty"`
 }
 
 type AttachmentField struct {
